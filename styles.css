@@ -113,3 +113,31 @@ h1, h2, h3, h4, h5 {
 .hero-right__yellow {
   background-color: rgba(255, 185, 57, 1);
 } 
+
+/* Nav */
+a {
+  text-align: center;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-decoration: none;
+  padding: 1.25rem 0;
+}
+
+.home {
+  grid-column: 2;
+}
+
+.contact {
+  grid-column: span 2;
+  width: 167px;
+}
+
+.active {
+  color: black;
+}
+
+/* personal finance */
+.personal-finance {
+  background-color: rgba(169, 161, 158, 1);
+}
