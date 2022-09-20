@@ -47,6 +47,8 @@ h5 {
     "hero-blue hero-blue hero-blue hero-right hero-right hero-right"
     ". nav nav nav nav ."
     "personal-finance personal-finance personal-finance personal-finance personal-finance personal-finance"
+    "about about about about about about"
+    "step-0 step-0 step-1 step-1 . ."
 
   ;
 }
@@ -244,4 +246,70 @@ a {
 
 .card--orange .card__img {
   background-color: rgba(241, 121, 73, 1);
+}
+
+/* ABOUT US */
+
+.about {
+  grid-area: about;
+  background: #FAB131;
+  height: 680px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 2.8125rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin-bottom: 0.6875rem;
+
+}
+
+.about p {
+  max-width: 442px;
+  margin-bottom: 100px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+
+
+
+/* HOW IT WORKS? */
+
+.step-0 {
+  grid-area: step-0;
+}
+
+.step-1 {
+  grid-area: step-1;
+}
+
+.step {
+  height: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.step aside {
+  align-self: flex-start;
+  padding: 25px;
+  font-weight: 900;
+  font-size: 35px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.step h3 {
+  font-weight: 500;
+  font-size: 17px;
+  color:rgba(0, 0, 0, 0.7);
+  font-family: "Fira Sans", sans-serif;
 }
