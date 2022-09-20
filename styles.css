@@ -151,6 +151,8 @@ a {
 .personal-finance {
   grid-area: personal-finance;
   background-color: rgba(169, 161, 158, 1);
+  height: 612px;
+  position: relative;
 }
 
 .personal-finance__content {
@@ -181,4 +183,65 @@ a {
   line-height: 1.5rem;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
+}
+
+/* Cards */
+.cards-container {
+  margin: 0 100px;
+  display: flex;
+  gap: 20px;
+  position: absolute;
+  bottom: -167px;
+}
+
+.card {
+  height: 308px;
+  background-color: white;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.card__img {
+  background: #C7DDEA;
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  margin: 0 10px;
+  height: 150px;
+  position: absolute;
+  top: -26px;
+  width: 233px;
+}
+
+.card__img img {
+  height: 90%;
+  margin-top: auto;
+}
+
+.card h2 {
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 0.875rem;
+  margin-top: 150px;
+}
+
+.card p {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1.125rem;
+  color: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  margin: 0 21px 0px 21px;
+}
+
+.card--yellow .card__img {
+  background-color: rgba(250, 177, 49, 1);
+}
+
+.card--orange .card__img {
+  background-color: rgba(241, 121, 73, 1);
 }
