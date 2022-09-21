@@ -1,23 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <div class="wrapper grid-2">
-    <header class="main-header">
-      <h1>Oh hello there!</h1>
-      <img src="images/manandbaby.svg" alt="man-and-baby">
-    </header>
-    <nav>
-      <a href="/">Home</a>
-      <a href="/">Our offer</a>
-      <a href="/">Why us</a>
-      <a class="active" href="/">Contact</a>
-    </nav>
-  </div>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper grid-2">
+      <header class="main-header">
+        <h1>Oh hello there!</h1>
+        <img src="images/manandbaby.svg" alt="man-and-baby" />
+      </header>
+      <nav>
+        <a href="/">Home</a>
+        <a href="/">Our offer</a>
+        <a href="/">Why us</a>
+        <a class="active" href="/">Contact</a>
+      </nav>
+      <section class="contact">
+        <section class="contact__wrapper">
+          <h2>
+            Whats on your<br />
+            mind?
+          </h2>
+          <form action="/contact.html" method="POST">
+            <label for="">Your email</label>
+            <input type="email" />
+            <label for="">Your message</label>
+            <textarea
+              placeholder="Dear insurance company..."
+              name=""
+              id=""
+            ></textarea>
+            <button class="btn" type="submit">SEND MESSAGE</button>
+          </form>
+        </section>
+      </section>
+      <section class="visit">
+        <img src="images/gps.svg" alt="gps" />
+        <article>
+          <h2>Come visit us!</h2>
+          <p>
+            2219 Griffin Street<br />
+            San Francisco
+          </p>
+        </article>
+      </section>
+      <footer></footer>
+    </div>
+  </body>
 </html>

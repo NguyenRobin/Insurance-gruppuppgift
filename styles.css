@@ -51,7 +51,9 @@ h5 {
     "step-0 step-0 step-1 step-1 step-2 step-2"
     "step-3 step-3 step-4 step-4 step-5 step-5"
     "scroll-up scroll-up scroll-up scroll-up scroll-up scroll-up"
-    "footer footer footer footer footer footer";
+    "footer footer footer footer footer footer"
+  ;
+
 }
 
 .hero-blue {
@@ -305,7 +307,7 @@ a {
 .step h3 {
   font-weight: 500;
   font-size: 17px;
-  color:rgba(0, 0, 0, 0.7);
+  color: rgba(0, 0, 0, 0.7);
   font-family: "Fira Sans", sans-serif;
 }
 
@@ -324,7 +326,8 @@ a {
 
 .step-2 {
   grid-area: step-2;
-  background-color: #EBEBEB;;
+  background-color: #EBEBEB;
+  ;
 }
 
 .step-3 {
@@ -351,7 +354,8 @@ a {
   align-items: center;
   grid-area: scroll-up;
   height: 68px;
-  background-color: #A9A19E;;
+  background-color: #A9A19E;
+  ;
 }
 
 .scroll-up p {
@@ -371,9 +375,13 @@ footer {
 
 .grid-2 {
   display: grid;
-  grid-template-columns: repeat(6,1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-template-areas: "header header header header header header"
-  ". nav nav nav nav ."
+    ". nav nav nav nav ."
+    "contact contact contact contact contact contact"
+    "visit visit visit visit visit visit"
+    "footer footer footer footer footer footer"
+  ;
 }
 
 .main-header {
@@ -381,13 +389,14 @@ footer {
   grid-area: header;
   justify-content: center;
   align-items: center;
-  background-color: #C7DDEA;;
+  background-color: #C7DDEA;
+  ;
   height: 340px;
   position: relative;
 }
 
 .main-header h1 {
-  margin-top: 15px ;
+  margin-top: 15px;
   font-size: 2.8125rem;
 }
 
@@ -399,7 +408,98 @@ footer {
 
 /* CONTACT FORM */
 
-.contact-form {
+.contact {
+  grid-area: contact;
   height: 544px;
-  background-color: #A9A19E;;
+  background-color: #A9A19E;
+  padding: 6.625rem 150px 30px 80px;
+}
+
+.contact h2 {
+  flex: 1;
+  color: #FFFFFF;
+  font-size: 2.8125rem;
+  font-weight: 900;
+  padding-right: 130px;
+
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.contact form input {
+  height: 40px;
+  margin-bottom: 20px;
+  border-radius: 2px;
+  border: none;
+}
+
+.contact textarea {
+  background: #FEFEFE;
+  border-radius: 2px;
+  height: 166px;
+  margin-bottom: 2rem;
+  resize: none;
+  padding: 10px;
+  border: none;
+}
+
+.contact form label {
+  color: rgba(255, 255, 255, 1);
+  font-size: 0.875rem;
+  margin-bottom: 0.375rem;
+}
+
+.contact form button {
+  margin-left: auto;
+}
+
+.contact__wrapper {
+  display: flex;
+}
+
+
+/* Visit us */
+.visit {
+  grid-area: visit;
+  height: 407px;
+  background-image: url("images/maps.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.visit h2 {
+  color: rgba(255, 255, 255, 1);
+}
+
+.visit p {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.visit article {
+  position: absolute;
+  top: 2.8125rem;
+  left: 5.375rem;
+  background: #FAB131;
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+  width: 323px;
+  height: 206px;
+}
+
+.visit article h2 {
+  margin: 1.375rem 0 2px 1.375rem;
+  font-size: 2.8125rem;
+}
+
+.visit article p {
+  margin-left: 1.375rem;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
 }
