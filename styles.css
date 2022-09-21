@@ -48,9 +48,10 @@ h5 {
     ". nav nav nav nav ."
     "personal-finance personal-finance personal-finance personal-finance personal-finance personal-finance"
     "about about about about about about"
-    "step-0 step-0 step-1 step-1 . ."
-
-  ;
+    "step-0 step-0 step-1 step-1 step-2 step-2"
+    "step-3 step-3 step-4 step-4 step-5 step-5"
+    "scroll-up scroll-up scroll-up scroll-up scroll-up scroll-up"
+    "footer footer footer footer footer footer";
 }
 
 .hero-blue {
@@ -279,32 +280,26 @@ a {
 }
 
 
-
-
 /* HOW IT WORKS? */
-
-.step-0 {
-  grid-area: step-0;
-}
-
-.step-1 {
-  grid-area: step-1;
-}
 
 .step {
   height: 340px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  position: relative;
 }
 
 .step aside {
-  align-self: flex-start;
-  padding: 25px;
   font-weight: 900;
   font-size: 35px;
+  font-family: Frank Ruhl Libre;
   color: rgba(0, 0, 0, 0.4);
+  position: absolute;
+  top: 20px;
+  left: 20px;
 }
 
 .step h3 {
@@ -312,4 +307,99 @@ a {
   font-size: 17px;
   color:rgba(0, 0, 0, 0.7);
   font-family: "Fira Sans", sans-serif;
+}
+
+
+.step-0 {
+  grid-area: step-0;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.8);
+  line-height: 2.8125rem;
+  background-color: rgba(199, 221, 234, 1);
+}
+
+.step-1 {
+  grid-area: step-1;
+}
+
+.step-2 {
+  grid-area: step-2;
+  background-color: #EBEBEB;;
+}
+
+.step-3 {
+  grid-area: step-3;
+}
+
+.step-4 {
+  grid-area: step-4;
+  background-color: #F17949;
+}
+
+.step-5 {
+  grid-area: step-5;
+}
+
+
+
+/*---- CONTACT ----*/
+
+.scroll-up {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  grid-area: scroll-up;
+  height: 68px;
+  background-color: #A9A19E;;
+}
+
+.scroll-up p {
+  font-weight: 500;
+  font-size: 1.0625rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+footer {
+  grid-area: footer;
+  height: 340px;
+  background-color: #777574;
+}
+
+/*-------------- CONTACT.HTML -------------------*/
+/* HEADER */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  grid-template-areas: "header header header header header header"
+  ". nav nav nav nav ."
+}
+
+.main-header {
+  display: flex;
+  grid-area: header;
+  justify-content: center;
+  align-items: center;
+  background-color: #C7DDEA;;
+  height: 340px;
+  position: relative;
+}
+
+.main-header h1 {
+  margin-top: 15px ;
+  font-size: 2.8125rem;
+}
+
+.main-header img {
+  position: absolute;
+  bottom: 0;
+  right: 8rem;
+}
+
+/* CONTACT FORM */
+
+.contact-form {
+  height: 544px;
+  background-color: #A9A19E;;
 }
