@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Frank+Ruhl+Libre:wght@300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Frank+Ruhl+Libre:wght@300;400;500;700;900&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Fira Sans', sans-serif;
+  font-family: "Fira Sans", sans-serif;
 }
 
 body {
@@ -17,9 +17,8 @@ h2,
 h3,
 h4,
 h5 {
-  font-family: 'Frank Ruhl Libre', serif;
+  font-family: "Frank Ruhl Libre", serif;
 }
-
 
 /* UTILITIES */
 .btn {
@@ -34,7 +33,6 @@ h5 {
   color: rgba(0, 0, 0, 0.8);
 }
 
-
 .wrapper {
   max-width: 1000px;
   margin: 0 auto;
@@ -46,23 +44,25 @@ h5 {
   grid-template-areas:
     "hero-blue hero-blue hero-blue hero-right hero-right hero-right"
     ". nav nav nav nav ."
-    "personal-finance personal-finance personal-finance personal-finance personal-finance personal-finance"
+    "personal-finance personal-finance personal-finance personal-finance__text personal-finance__text personal-finance__text"
+    "cards cards cards cards cards cards"
     "about about about about about about"
     "step-0 step-0 step-1 step-1 step-2 step-2"
     "step-3 step-3 step-4 step-4 step-5 step-5"
     "scroll-up scroll-up scroll-up scroll-up scroll-up scroll-up"
-    "footer footer footer footer footer footer"
-  ;
-
+    "footer footer footer footer footer footer";
 }
 
+/* ÄNDRING TILL BACKGROUND IMG  */
 .hero-blue {
   grid-area: hero-blue;
   background-color: rgba(199, 221, 234, 1);
+  background-image: url(images/hero-img.svg);
+  background-repeat: no-repeat;
+  background-position: bottom 0 left 90%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  position: relative;
   height: 544px;
 }
 
@@ -88,12 +88,6 @@ h5 {
 
 .hero-blue span {
   color: white;
-}
-
-.hero-blue img {
-  position: absolute;
-  bottom: 0;
-  right: 1rem;
 }
 
 /* Hero orange */
@@ -155,107 +149,89 @@ a {
 /* personal finance */
 .personal-finance {
   grid-area: personal-finance;
-  background-color: rgba(169, 161, 158, 1);
-  height: 612px;
-  position: relative;
-}
-
-.personal-finance__content {
-  margin: 103px 100px 0px 100px;
-}
-
-.personal-finance__text-btn {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-}
-
-.personal-finance__text {
-  display: flex;
-  justify-content: space-between;
-}
-
-.personal-finance__content h2 {
+  gap: 3rem;
+  min-height: 40rem;
+  padding: 6rem;
+  flex-wrap: wrap;
+  background-color: rgba(169, 161, 158, 1);
   color: #fff;
   line-height: 2.8125rem;
   font-size: 2.8125rem;
-  max-width: 314px;
 }
 
-.personal-finance__content p {
-  max-width: 280px;
-  font-size: 0.875rem;
-  line-height: 1.5rem;
-  color: rgba(0, 0, 0, 0.6);
-  font-weight: 500;
+.personal-finance__text {
+  grid-area: personal-finance__text;
+  display: flex;
+  padding: 8rem;
+  min-height: 40rem;
+  background-color: rgba(169, 161, 158, 1);
 }
 
 /* Cards */
 .cards-container {
-  margin: 0 100px;
   display: flex;
-  gap: 20px;
-  position: absolute;
-  bottom: -167px;
+  justify-content: center;
+  background-color: #fab131;
+  gap: 1rem;
+  padding: 3rem;
+  grid-area: cards;
+  margin-bottom: -500px;
+  flex-wrap: wrap;
 }
 
 .card {
-  height: 308px;
-  background-color: white;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  /* overflow: hidden; */
-  position: relative;
-}
-
-.card__img {
-  background: #C7DDEA;
-  border-radius: 4px;
+  background-color: #fff;
   display: flex;
-  justify-content: center;
-  margin: 0 10px;
-  height: 150px;
-  position: absolute;
-  top: -26px;
-  width: 233px;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 0.5rem;
+  max-width: 250px;
+  gap: 1rem;
+  transform: translateY(-230px);
 }
 
-.card__img img {
-  height: 90%;
-  margin-top: auto;
+.card .card__child,
+.card__women,
+.card__dad {
+  width: 100%;
+  height: 10rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  transform: translateY(-50px); /* Flyttar upp bilderna */
 }
 
-.card h2 {
-  font-size: 1rem;
-  font-weight: 700;
-  text-align: center;
-  color: rgba(0, 0, 0, 0.9);
-  margin-bottom: 0.875rem;
-  margin-top: 150px;
+.card__child {
+  background: #c7ddea;
+  background-image: url(images/child.svg);
+  background-size: 80%;
+  background-position: center bottom;
 }
 
-.card p {
-  font-size: 0.6875rem;
-  font-weight: 700;
-  line-height: 1.125rem;
-  color: rgba(0, 0, 0, 0.4);
-  text-align: center;
-  margin: 0 21px 0px 21px;
+.card__women {
+  background-image: url(images/justright.svg);
+  background-color: #fab131;
+  background-size: 50%;
+  background-position: center bottom;
 }
 
-.card--yellow .card__img {
-  background-color: rgba(250, 177, 49, 1);
-}
-
-.card--orange .card__img {
-  background-color: rgba(241, 121, 73, 1);
+.card__dad {
+  background-image: url(images/oldfart.svg);
+  background-color: #f17949;
+  background-size: 60%;
+  background-position: center bottom;
 }
 
 /* ABOUT US */
 
 .about {
   grid-area: about;
-  background: #FAB131;
+  background: #fab131;
   height: 680px;
   display: flex;
   flex-direction: column;
@@ -268,7 +244,6 @@ a {
   font-weight: 900;
   color: #ffffff;
   margin-bottom: 0.6875rem;
-
 }
 
 .about p {
@@ -280,7 +255,6 @@ a {
   text-align: center;
   color: rgba(0, 0, 0, 0.6);
 }
-
 
 /* HOW IT WORKS? */
 
@@ -311,7 +285,6 @@ a {
   font-family: "Fira Sans", sans-serif;
 }
 
-
 .step-0 {
   grid-area: step-0;
   font-size: 2rem;
@@ -326,8 +299,7 @@ a {
 
 .step-2 {
   grid-area: step-2;
-  background-color: #EBEBEB;
-  ;
+  background-color: #ebebeb;
 }
 
 .step-3 {
@@ -336,14 +308,12 @@ a {
 
 .step-4 {
   grid-area: step-4;
-  background-color: #F17949;
+  background-color: #f17949;
 }
 
 .step-5 {
   grid-area: step-5;
 }
-
-
 
 /*---- CONTACT ----*/
 
@@ -354,8 +324,7 @@ a {
   align-items: center;
   grid-area: scroll-up;
   height: 68px;
-  background-color: #A9A19E;
-  ;
+  background-color: #a9a19e;
 }
 
 .scroll-up p {
@@ -376,12 +345,12 @@ footer {
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-areas: "header header header header header header"
+  grid-template-areas:
+    "header header header header header header"
     ". nav nav nav nav ."
     "contact contact contact contact contact contact"
     "visit visit visit visit visit visit"
-    "footer footer footer footer footer footer"
-  ;
+    "footer footer footer footer footer footer";
 }
 
 .main-header {
@@ -389,8 +358,7 @@ footer {
   grid-area: header;
   justify-content: center;
   align-items: center;
-  background-color: #C7DDEA;
-  ;
+  background-color: #c7ddea;
   height: 340px;
   position: relative;
 }
@@ -411,17 +379,16 @@ footer {
 .contact {
   grid-area: contact;
   height: 544px;
-  background-color: #A9A19E;
+  background-color: #a9a19e;
   padding: 6.625rem 150px 30px 80px;
 }
 
 .contact h2 {
   flex: 1;
-  color: #FFFFFF;
+  color: #ffffff;
   font-size: 2.8125rem;
   font-weight: 900;
   padding-right: 130px;
-
 }
 
 .contact form {
@@ -438,7 +405,7 @@ footer {
 }
 
 .contact textarea {
-  background: #FEFEFE;
+  background: #fefefe;
   border-radius: 2px;
   height: 166px;
   margin-bottom: 2rem;
@@ -460,7 +427,6 @@ footer {
 .contact__wrapper {
   display: flex;
 }
-
 
 /* Visit us */
 .visit {
@@ -487,7 +453,7 @@ footer {
   position: absolute;
   top: 2.8125rem;
   left: 5.375rem;
-  background: #FAB131;
+  background: #fab131;
   box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
   width: 323px;
   height: 206px;
@@ -502,4 +468,32 @@ footer {
   margin-left: 1.375rem;
   font-size: 0.875rem;
   line-height: 1.5rem;
+}
+
+@media screen and (max-width: 728px) {
+  .grid {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "hero-blue"
+      "hero-right"
+      "nav"
+      "personal-finance"
+      "personal-finance__text"
+      "cards"
+      "about"
+      "step-0"
+      "step-1"
+      "step-2"
+      "step-3"
+      "step-4"
+      "step-5"
+      "scroll-up"
+      "footer";
+  }
+  .hero-blue__content {
+    padding: 30px;
+  }
+  .hero-right {
+    min-height: 544px;
+  }
 }
